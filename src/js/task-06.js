@@ -1,6 +1,6 @@
 const input = document.querySelector("#validation-input");
 
-const validateInput = () => {
+function validateInput() {
         if (input.value.length !== Number(input.dataset.length))
         {
            input.classList.add("invalid");
@@ -9,7 +9,7 @@ const validateInput = () => {
     input.classList.add("valid");
 }
 
-const removeValidationResult = () =>{
+function removeValidationResult () {
      input.classList.remove("valid", "invalid");
 }
 
