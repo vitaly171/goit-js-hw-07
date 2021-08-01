@@ -1,7 +1,9 @@
 const input = document.querySelector("#validation-input");
 
+const inputValidation = Number(input.dataset.length);
+
 function validateInput() {
-        if (input.value.length !== Number(input.dataset.length))
+        if (input.value.length !== inputValidation)
         {
            input.classList.add("invalid");
     }
