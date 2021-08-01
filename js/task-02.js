@@ -11,15 +11,11 @@ const ingredients = [
   'Приправы',
 ];
 
-ingredients.map((ingredient) => {
-  const contentEl = document.querySelector('#ingredients');
+const contentEl = document.querySelector('#ingredients');
+const ingredient = ingredients.map(ingredient => {
   const ingredientName = document.createElement('li');
   ingredientName.textContent = ingredient;
-  contentEl.append(ingredientName)
+  return ingredientName;
 }
 )
-
-
-
-
-//const ingredientsRef = document.querySelector('#ingredients')
+contentEl.append(...ingredient);
